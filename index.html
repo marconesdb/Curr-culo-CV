@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Aside</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos do aside esquerdo */
+        .aside-left {
+            width: 20%;
+            background-color: #f0f0f0;
+            float: left;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Estilos do container */
+        .container {
+            width: 74%; /* Ajustado para 60% para manter o aside direito visível */
+            float: left;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos do aside direito */
+        .aside-right {
+            width: 6%; /* Ajustado para 20% para manter o aside direito visível */
+            background-color: #f0f0f0;
+            float: right;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Estilos para garantir que a altura dos elementos seja sempre a mesma */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilos para a imagem dentro do aside esquerdo */
+        .aside-left img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Para tornar a imagem redonda */
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para o texto do aside esquerdo */
+        .aside-left h2,
+        .aside-left p {
+            margin: 0;
+        }
+
+        /* Estilos para a imagem dentro do container */
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+            width: 30%; /* Largura reduzida para dar espaço ao texto */
+        }
+
+        /* Estilos para o texto ao lado da imagem dentro do container */
+        .container p {
+            width: calc(70% - 20px); /* Subtrai a largura da imagem e um pouco de margem */
+        }
+
+        /* Estilos para os links das mídias sociais */
+        .social-links {
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+
+        .container-filho{
+           margin-left: 25px;
+        }
+
+        /* Media queries para dispositivos móveis */
+        @media only screen and (max-width: 768px) {
+            .aside-left, .container, .aside-right {
+                width: 100%;
+                float: none;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .container img {
+                width: 70%; /* Ajustado para ocupar a largura total da tela em dispositivos móveis */
+                margin: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Aside esquerdo -->
+    <aside class="aside-left">
+        <img src="https://via.placeholder.com/150" alt="Imagem de Exemplo">
+        <h2>Marcone Silva de Brito</h2>
+        <p>Front-end Developer</p>
+        <!-- Links das mídias sociais -->
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <!-- Adicione mais links conforme necessário -->
+        </div>
+        <hr>
+    </aside>
+
+    <!-- Container -->
+    <div class="container">
+        <div class="container-filho">
+            <h1>Eu sou Marcone Silva de Brito,<br> Front-end Developer</h1>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula lectus non convallis consectetur. Vivamus ut tortor a eros ultricies fermentum. Nullam consequat dui nec erat mattis, in convallis neque commodo. Quisque finibus, tortor ac tincidunt condimentum, purus purus varius turpis, nec condimentum urna nunc ac magna.</p>
+        </div>
+        <img src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
+    </div>
+
+    <!-- Aside direito -->
+    <aside class="aside-right">
+        <h2>Aside Direito</h2>
+        <p>Este é um exemplo de um aside à direita.</p>
+    </aside>
+
+    <!-- Clearfix para garantir que a altura dos elementos seja sempre a mesma -->
+    <div class="clearfix"></div>
+
+</body>
+</html>
