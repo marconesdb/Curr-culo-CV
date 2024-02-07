@@ -9,6 +9,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Remover barra de rolagem horizontal */
         }
 
         /* Estilos do aside esquerdo */
@@ -18,7 +19,6 @@
             float: left;
             padding: 20px;
             box-sizing: border-box;
-            height: 100vh;
             text-align: center;
         }
 
@@ -31,6 +31,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 20px; /* Espaço entre o container e o aside-right */
         }
 
         /* Estilos do aside direito */
@@ -40,7 +41,6 @@
             float: right;
             padding: 20px;
             box-sizing: border-box;
-            height: 100vh;
             text-align: center;
         }
 
@@ -70,7 +70,7 @@
             max-width: 100%;
             height: auto;
             margin-right: 20px;
-            width: 30%; /* Largura reduzida para dar espaço ao texto */
+            max-height: 70%; /* Ajustado para evitar sobreposição */
         }
 
         /* Estilos para o texto ao lado da imagem dentro do container */
@@ -90,8 +90,39 @@
         }
 
         .container-filho{
-           margin-left: 25px;
+           margin-left: 0px;
+           /* margin-top: -450px; Removido */
         }
+
+          /* Estilos para a lista sem marcadores */
+    .progress-list {
+        list-style-type: none; /* Remove as bolinhas */
+        padding: 0;
+    }
+
+    /* Estilos para os itens da lista com barras de progresso */
+    .progress-list li {
+        margin-bottom: 10px; /* Espaçamento entre os itens */
+        text-align: left; /* Alinhar o texto à esquerda */
+        position: relative; /* Posição relativa para permitir posicionamento absoluto dos pseudo-elementos */
+    }
+
+    /* Estilos para as barras de progresso dentro dos itens da lista */
+    .progress-list progress {
+        width: calc(100% - 60px); /* Largura total da barra de progresso (descontando o espaço ocupado pelo texto e pela porcentagem) */
+        display: inline-block; /* Permitir que a barra de progresso apareça ao lado do texto */
+        margin-right: 10px; /* Espaçamento entre o texto e a barra de progresso */
+    }
+
+    /* Estilos para a porcentagem */
+    .progress-list progress::after {
+       
+        position: absolute; /* Posição absoluta para permitir posicionamento preciso */
+        right: 0; /* Alinha a porcentagem à direita */
+        top: 0; /* Alinha a porcentagem ao topo */
+        margin-top: -2px; /* Ajusta o alinhamento vertical */
+        color: black; /* Cor do texto */
+    }
 
         /* Media queries para dispositivos móveis */
         @media only screen and (max-width: 768px) {
@@ -107,6 +138,7 @@
             .container img {
                 width: 70%; /* Ajustado para ocupar a largura total da tela em dispositivos móveis */
                 margin: 0;
+                max-height: unset; /* Remover a altura máxima para evitar cortes em dispositivos móveis */
             }
         }
 
@@ -126,6 +158,41 @@
             <!-- Adicione mais links conforme necessário -->
         </div>
         <hr>
+        <!-- Lista com barras de progresso -->
+        <h1>Skills</h1>
+    <ul class="progress-list">
+        <p>HTML</p>
+        <li><progress value="70" max="100"></progress></li>
+        <p>CSS</p>
+        <li><progress value="40" max="100"></progress></li>
+        <p>Javascript</p>
+        <li><progress value="90" max="100"></progress></li>
+        <p>PHP</p>
+        <li><progress value="70" max="100"></progress></li>
+        <p>Python </p>
+        <li><progress value="40" max="100"></progress></li>
+        <p>Java</p>
+        <li><progress value="90" max="100"></progress></li>
+        <!-- Adicione mais itens conforme necessário -->
+    </ul>
+
+
+    <h1>Extra Skills</h1>
+    <ul class="progress-list">
+        <p>HTML</p>
+        <li><progress value="70" max="100"></progress></li>
+        <p>CSS</p>
+        <li><progress value="40" max="100"></progress></li>
+        <p>Javascript</p>
+        <li><progress value="90" max="100"></progress></li>
+        <p>PHP</p>
+        <li><progress value="70" max="100"></progress></li>
+        <p>Python </p>
+        <li><progress value="40" max="100"></progress></li>
+        <p>Java</p>
+        <li><progress value="90" max="100"></progress></li>
+        <!-- Adicione mais itens conforme necessário -->
+    </ul>
     </aside>
 
     <!-- Container -->
@@ -135,9 +202,13 @@
             
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula lectus non convallis consectetur. Vivamus ut tortor a eros ultricies fermentum. Nullam consequat dui nec erat mattis, in convallis neque commodo. Quisque finibus, tortor ac tincidunt condimentum, purus purus varius turpis, nec condimentum urna nunc ac magna.</p>
         </div>
-        <img src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
+        <img class="" src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
     </div>
+    <!-- Projetos - Cards -->
+    <section>
 
+
+    </section>
     <!-- Aside direito -->
     <aside class="aside-right">
         <h2>Aside Direito</h2>
