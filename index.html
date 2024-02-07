@@ -10,6 +10,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             overflow-x: hidden; /* Remover barra de rolagem horizontal */
+            position: relative; /* Adicionado para posicionar o aside-right */
         }
 
         /* Estilos do aside esquerdo */
@@ -32,16 +33,20 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px; /* Espaço entre o container e o aside-right */
+            position: relative; /* Adicionado para posicionar o aside-right */
         }
 
         /* Estilos do aside direito */
         .aside-right {
             width: 6%; /* Ajustado para 20% para manter o aside direito visível */
             background-color: #f0f0f0;
-            float: right;
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
+            position: fixed; /* Posição fixa para manter o aside-right no lugar */
+            top: 0; /* Alinhar o topo do aside-right ao topo da janela */
+            bottom: 0; /* Alinhar o rodapé do aside-right ao rodapé da janela */
+            right: 0; /* Alinhar o aside-right à direita da janela */
         }
 
         /* Estilos para garantir que a altura dos elementos seja sempre a mesma */
@@ -71,6 +76,7 @@
             height: auto;
             margin-right: 20px;
             max-height: 70%; /* Ajustado para evitar sobreposição */
+            margin: -18px 0;
         }
 
         /* Estilos para o texto ao lado da imagem dentro do container */
@@ -124,6 +130,39 @@
         color: black; /* Cor do texto */
     }
 
+    /* Estilos para os cards de projetos */
+   /* Estilos dos cards de projeto */
+   .projects {
+    width: 100%; /* Largura total */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espaço entre os cards e o aside right */
+    display: flex; /* Exibir os cards em uma linha */
+    flex-wrap: wrap; /* Permitir quebrar a linha se necessário */
+    justify-content: space-between; /* Espaço uniforme entre os cards */
+}
+
+.project-card {
+    width: calc(33.33% - 20px); /* Ajuste para 33% com margem de 20px */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: blue;
+}
         /* Media queries para dispositivos móveis */
         @media only screen and (max-width: 768px) {
             .aside-left, .container, .aside-right {
@@ -204,11 +243,52 @@
         </div>
         <img class="" src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
     </div>
-    <!-- Projetos - Cards -->
-    <section>
+    
+     <!-- Projetos - Cards -->
+<!-- Projetos - Cards -->
+<!-- Container -->
+<div class="container">
+    <div class="container-filho">
+       <!-- Projetos - Cards -->
+    <section class="projects">
+        <div class="project-card">
+            <h3>Projeto 1</h3>
+            <p>Descrição do projeto 1.</p>
+            <a href="#">Ver mais</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 2</h3>
+            <p>Descrição do projeto 2.</p>
+            <a href="#">Ver mais</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 3</h3>
+            <p>Descrição do projeto 3.</p>
+            <a href="#">Ver mais</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 4</h3>
+            <p>Descrição do projeto 4.</p>
+            <a href="#">Ver mais</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 5</h3>
+            <p>Descrição do projeto 5.</p>
+            <a href="#">Ver mais</a>
+        </div>
+        <div class="project-card">
+            <h3>Projeto 6</h3>
+            <p>Descrição do projeto 6.</p>
+            <a href="#">Ver mais</a>
+        </div>
+    
+    </div>
+    
+</div>
 
 
-    </section>
+
+
     <!-- Aside direito -->
     <aside class="aside-right">
         <h2>Aside Direito</h2>
