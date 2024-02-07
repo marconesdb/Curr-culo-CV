@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Layout com Aside</title>
     <style>
         /* Estilos gerais */
@@ -85,8 +86,14 @@
         }
 
         /* Estilos para os links das mídias sociais */
-        .social-links {
-            text-align: center;
+       
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 24px;
+            color: #333;
         }
 
         .social-links a {
@@ -190,10 +197,11 @@
         <h2>Marcone Silva de Brito</h2>
         <p>Front-end Developer</p>
         <!-- Links das mídias sociais -->
+        <!-- Links das mídias sociais com ícones -->
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <!-- Adicione mais links conforme necessário -->
         </div>
         <hr>
@@ -214,22 +222,20 @@
         <li><progress value="90" max="100"></progress></li>
         <!-- Adicione mais itens conforme necessário -->
     </ul>
-
+   
+    <hr>
 
     <h1>Extra Skills</h1>
     <ul class="progress-list">
-        <p>HTML</p>
+        <p>Bootstrap</p>
         <li><progress value="70" max="100"></progress></li>
-        <p>CSS</p>
+        <p>Tailwind CSS</p>
         <li><progress value="40" max="100"></progress></li>
-        <p>Javascript</p>
+        <p>React</p>
         <li><progress value="90" max="100"></progress></li>
-        <p>PHP</p>
+        <p>Next js</p>
         <li><progress value="70" max="100"></progress></li>
-        <p>Python </p>
-        <li><progress value="40" max="100"></progress></li>
-        <p>Java</p>
-        <li><progress value="90" max="100"></progress></li>
+        
         <!-- Adicione mais itens conforme necessário -->
     </ul>
     </aside>
@@ -291,8 +297,8 @@
 
     <!-- Aside direito -->
     <aside class="aside-right">
-        <h2>Aside Direito</h2>
-        <p>Este é um exemplo de um aside à direita.</p>
+        <h2></h2>
+        <p></p>
     </aside>
 
     <!-- Clearfix para garantir que a altura dos elementos seja sempre a mesma -->
