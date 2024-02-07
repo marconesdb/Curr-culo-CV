@@ -21,7 +21,8 @@
             float: left;
             padding: 20px;
             box-sizing: border-box;
-            text-align: center;
+            
+            
         }
 
         /* Estilos do container */
@@ -170,6 +171,26 @@
     text-decoration: none;
     color: blue;
 }
+
+
+.container-cursos {
+    width: calc(33.33% - 20px); /* Ajuste para 33.33% com margem de 20px */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    float: left; /* Para alinhar as colunas horizontalmente */
+    margin-right: 20px; /* Espaçamento entre as colunas */
+    margin-left: 20px;
+}
+
+.container-cursos:last-child {
+    margin-right: 0; /* Remove a margem à direita da última coluna */
+}
+
+
         /* Media queries para dispositivos móveis */
         @media only screen and (max-width: 768px) {
             .aside-left, .container, .aside-right {
@@ -238,6 +259,8 @@
         
         <!-- Adicione mais itens conforme necessário -->
     </ul>
+
+    <button>Download CV</button>
     </aside>
 
     <!-- Container -->
@@ -250,9 +273,46 @@
         <img class="" src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
     </div>
     
-     <!-- Projetos - Cards -->
+     <!-- Parágrafos Resume CV-->
+     <div class="container-cursos">
+        
+           <h3>Curso de Ifood Descomplica</h3>
+           <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+        
+       
+    </div>
+     <!-- Fim -->
+
+     <!-- Parágrafos Resume CV-->
+     <div class="container-cursos">
+        
+        <h3>Curso de Ifood Descomplica</h3>
+        <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+     
+    
+ </div>
+  <!-- Fim -->
+
+  <!-- Parágrafos Resume CV-->
+  <div class="container-cursos">
+        
+    <h3>Curso de Ifood Descomplica</h3>
+    <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+ 
+
+</div>
+
+<!-- Parágrafos Resume CV-->
+<div class="container-cursos">
+        
+    <h3>Curso de Ifood Descomplica</h3>
+    <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+ 
+
+</div>
+<!-- Fim -->
 <!-- Projetos - Cards -->
-<!-- Container -->
+
 <div class="container">
     <div class="container-filho">
        <!-- Projetos - Cards -->
@@ -260,6 +320,7 @@
         <div class="project-card">
             <h3>Projeto 1</h3>
             <p>Descrição do projeto 1.</p>
+            
             <a href="#">Ver mais</a>
         </div>
         <div class="project-card">
@@ -287,7 +348,7 @@
             <p>Descrição do projeto 6.</p>
             <a href="#">Ver mais</a>
         </div>
-    
+    </section>
     </div>
     
 </div>
