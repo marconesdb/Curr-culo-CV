@@ -7,9 +7,12 @@
     <title>Layout com Aside</title>
     <style>
         /* Estilos gerais */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+       
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', 'sans-serif';
             overflow-x: hidden; /* Remover barra de rolagem horizontal */
             position: relative; /* Adicionado para posicionar o aside-right */
         }
@@ -36,6 +39,7 @@
             align-items: center;
             margin-bottom: 20px; /* Espaço entre o container e o aside-right */
             position: relative; /* Adicionado para posicionar o aside-right */
+            background-color: rgb(160, 192, 193);
         }
 
         /* Estilos do aside direito */
@@ -62,8 +66,12 @@
         .aside-left img {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* Para tornar a imagem redonda */
+            border-radius: 60%; /* Para tornar a imagem redonda */
             margin-bottom: 10px;
+            margin-left: 50px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
 
         /* Estilos para o texto do aside esquerdo */
@@ -214,12 +222,12 @@
 <body>
     <!-- Aside esquerdo -->
     <aside class="aside-left">
-        <img src="https://via.placeholder.com/150" alt="Imagem de Exemplo">
-        <h2>Marcone Silva de Brito</h2>
-        <p>Front-end Developer</p>
+        <img src="img/Foto 3x4 Marcone.jpg" alt="Imagem de Exemplo">
+        <h2 style="text-align: center;">Marcone Silva de Brito</h2>
+        <p style="text-align: center;">Front-end Developer</p>
         <!-- Links das mídias sociais -->
         <!-- Links das mídias sociais com ícones -->
-        <div class="social-links">
+        <div class="social-links" style="text-align: center;">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-whatsapp"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -254,7 +262,7 @@
         <li><progress value="40" max="100"></progress></li>
         <p>React</p>
         <li><progress value="90" max="100"></progress></li>
-        <p>Next js</p>
+        <p>Next.JS</p>
         <li><progress value="70" max="100"></progress></li>
         
         <!-- Adicione mais itens conforme necessário -->
@@ -266,18 +274,18 @@
     <!-- Container -->
     <div class="container">
         <div class="container-filho">
-            <h1>Eu sou Marcone Silva de Brito,<br> Front-end Developer</h1>
+            <h1>Marcone Silva de Brito,<br> Front-end Developer</h1>
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula lectus non convallis consectetur. Vivamus ut tortor a eros ultricies fermentum. Nullam consequat dui nec erat mattis, in convallis neque commodo. Quisque finibus, tortor ac tincidunt condimentum, purus purus varius turpis, nec condimentum urna nunc ac magna.</p>
+            <p style="text-align: justify;">Como estudante do curso de Sistemas de Informação, sou um entusiasta fervoroso da tecnologia. Minha jornada profissional teve início como técnico de operações na BBTS, onde adquiri uma valiosa experiência na área de infraestrutura e hardware de TI. Além dos compromissos acadêmicos, estou constantemente em busca de aprimoramento através de cursos extracurriculares, expandindo meu conhecimento e desenvolvendo minhas habilidades.Tenho uma paixão particular pelo desenvolvimento Front-End e me aprofundo continuamente nesse universo por meio de estudos avançados. Adquiri diversas certificações que validam minha proficiência em HTML, CSS e Javascript, consolidando assim minha expertise nesse campo. </p>
         </div>
         <img class="" src="https://via.placeholder.com/500" alt="Imagem de Exemplo">
     </div>
-    
+                               <h2 style=" margin-left: 322px;">Certificados</h2>
      <!-- Parágrafos Resume CV-->
      <div class="container-cursos">
         
-           <h3>Curso de Ifood Descomplica</h3>
-           <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+           <h3> Pós-Graduação Lato Sensu - Machine Learning e IA</h3>
+           <p></p> 
         
        
     </div>
@@ -286,8 +294,8 @@
      <!-- Parágrafos Resume CV-->
      <div class="container-cursos">
         
-        <h3>Curso de Ifood Descomplica</h3>
-        <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+        <h3>Pós-Graduação Lato Sensu - Big Data e Ciência de Dados</h3>
+        <p></p> 
      
     
  </div>
@@ -296,17 +304,17 @@
   <!-- Parágrafos Resume CV-->
   <div class="container-cursos">
         
-    <h3>Curso de Ifood Descomplica</h3>
-    <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+    <h3>Pós-Graduação Aperfeiçoamento em Tecnologias Digitais Aplicadas à Educação</h3>
+    <p></p> 
  
 
 </div>
 
 <!-- Parágrafos Resume CV-->
-<div class="container-cursos">
+<div class="">
         
-    <h3>Curso de Ifood Descomplica</h3>
-    <p>Desenvolvimento Básico em Java com carga horária de 6 horas</p> 
+    <h3></h3>
+    <p></p> 
  
 
 </div>
@@ -316,22 +324,20 @@
 <div class="container">
     <div class="container-filho">
        <!-- Projetos - Cards -->
+       <h2 style="text-align: center;">Projetos</h2>
     <section class="projects">
         <div class="project-card">
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1.</p>
+            <h3>Site - Solar de Jesus</h3>
+            <a href="https://github.com/marconesdb/SiteSolarDeJesus-V1.3-MVC"><img src="img/Captura de Tela (4133).png" alt=""></a>
             
-            <a href="#">Ver mais</a>
         </div>
         <div class="project-card">
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2.</p>
-            <a href="#">Ver mais</a>
+            <h3>Trabalhadores da Última Hora</h3>
+           <a href="https://github.com/marconesdb/SiteTrabalhadoresDaUltimaHora"><img src="img/Trabalhadores da Última Hora.png" alt=""></a>
         </div>
         <div class="project-card">
-            <h3>Projeto 3</h3>
-            <p>Descrição do projeto 3.</p>
-            <a href="#">Ver mais</a>
+            <h3>Gerenciador de Tarefas</h3>
+          <a href="https://github.com/marconesdb/GerenciadorTarefasPython"><img src="img/Gerenciador de Tarefas.png" alt=""></a>
         </div>
         <div class="project-card">
             <h3>Projeto 4</h3>
